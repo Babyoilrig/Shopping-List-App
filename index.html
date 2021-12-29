@@ -35,19 +35,39 @@
 <div class="flex-container">
         <div><h1 class="headings"> Shopping List App </h1></div>
         <div><img src="C:\Users\bootcamp3\Documents\SOC\Christmas hols project - Shopping list app\vegetables-g518bd8818_640.jpg" 
-            alt="Fresh food picture" width="300" height="300"></div>
-    
+            alt="Fresh food picture" width="200" height="200"></div>
+
+    <form name= "addNewItems" onsubmit="addItems()" method="post">
         <div><h2 class="headings">Add New Items:</h2></div>
         <div><label for="additem">Add Item: </label>
             <input type="text" id="additem" name="additem"><br><br>
             <input type="submit" id="submit" value="Submit"> </div>
+        </form>
     
-    
-        <div><p><button type="displaylistbutton" id="displaylistbutton">Display Shopping List</button></p></div> 
-            <div><p><button type="button" id="startnewbutton">Start New Shopping List</button></p></div>
+        <div>
+            <form name="getItems" method= "get"><button type="displaylistbutton" 
+                id="displaylistbutton" value= "send">Display Shopping List</button><form></div> 
 
+            <div><p><button type="button" id="startnewbutton">Start New Shopping List</button></p></div>
+    
 </div>
     
-<script src="index.js"></script>
+<script src="index.js">
+    let displaylistbutton = document.getElementById("displaylistbutton");
+    displaylistbutton.addEventListener("click", getShoppingList);
+
+    function getShoppingList(){
+    console.log(shoppingList);
+
+    shoppingList = [
+"apple", 
+"crisps",
+"pasta",
+"milk",
+"bread"
+]
+}
+</script>
 </body>
 </html>
+

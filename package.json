@@ -5,7 +5,6 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node main.js",
     "dev": "nodemon indexnpm run dev.js"
   },
   "repository": {
@@ -21,6 +20,7 @@
   "homepage": "https://github.com/Babyoilrig/Shopping-List-App#readme",
   "dependencies": {
     "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
     "express": "^4.17.2"
   },
   "devDependencies": {
